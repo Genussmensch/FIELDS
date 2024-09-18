@@ -1,0 +1,164 @@
+[
+    {
+        "name": "Ashen Warrior",
+        "cost": 1,
+        "health": 1,
+        "attack": 1,
+        "move": 1,
+        "abilities": "none",
+        "card_template_id": 1
+    },
+    {
+        "name": "Shadow Thief",
+        "cost": 2,
+        "health": 2,
+        "attack": 2,
+        "move": 1,
+        "abilities": "none",
+        "card_template_id": 2
+    },
+    {
+        "name": "Arcane Mage",
+        "cost": 2,
+        "health": 1,
+        "attack": 1,
+        "move": 1,
+        "abilities": "none",
+        "card_template_id": 3
+    },
+    {
+        "name": "Hollow Knight",
+        "cost": 2,
+        "health": 1,
+        "attack": 1,
+        "move": 1,
+        "abilities": "none",
+        "card_template_id": 4
+    },
+    {
+        "name": "Grave Warden",
+        "cost": 2,
+        "health": 1,
+        "attack": 1,
+        "move": 2,
+        "abilities": "none",
+        "card_template_id": 5
+    },
+    {
+        "name": "Skeletal Vanguard",
+        "cost": 2,
+        "health": 1,
+        "attack": 1,
+        "move": 2,
+        "abilities": "none",
+        "card_template_id": 6
+    },
+    {
+        "name": "Corrupted Knight",
+        "cost": 3,
+        "health": 3,
+        "attack": 2,
+        "move": 1,
+        "abilities": "parry",
+        "card_template_id": 7
+    },
+    {
+        "name": "Abyssal Wanderer",
+        "cost": 3,
+        "health": 2,
+        "attack": 3,
+        "move": 2,
+        "abilities": "stealth",
+        "card_template_id": 8
+    },
+    {
+        "name": "Blighted Sorcerer",
+        "cost": 3,
+        "health": 1,
+        "attack": 3,
+        "move": 1,
+        "abilities": "spellcast",
+        "card_template_id": 9
+    },
+    {
+        "name": "Iron Sentinel",
+        "cost": 4,
+        "health": 4,
+        "attack": 1,
+        "move": 1,
+        "abilities": "block",
+        "card_template_id": 10
+    },
+    {
+        "name": "Fallen Knight",
+        "cost": 4,
+        "health": 3,
+        "attack": 3,
+        "move": 2,
+        "abilities": "none",
+        "card_template_id": 11
+    },
+    {
+        "name": "Cursed Herald",
+        "cost": 4,
+        "health": 2,
+        "attack": 4,
+        "move": 1,
+        "abilities": "lifesteal",
+        "card_template_id": 12
+    },
+    {
+        "name": "Watcher of the Abyss",
+        "cost": 5,
+        "health": 5,
+        "attack": 3,
+        "move": 1,
+        "abilities": "counter",
+        "card_template_id": 13
+    },
+    {
+        "name": "Blackened Paladin",
+        "cost": 5,
+        "health": 4,
+        "attack": 3,
+        "move": 1,
+        "abilities": "none",
+        "card_template_id": 14
+    },
+    {
+        "name": "Soul Reaper",
+        "cost": 6,
+        "health": 5,
+        "attack": 4,
+        "move": 2,
+        "abilities": "drain",
+        "card_template_id": 15
+    },
+    {
+        "name": "Crimson Executioner",
+        "cost": 6,
+        "health": 4,
+        "attack": 5,
+        "move": 1,
+        "abilities": "cleave",
+        "card_template_id": 16
+    },
+    {
+        "name": "Lord of Cinders",
+        "cost": 7,
+        "health": 6,
+        "attack": 5,
+        "move": 2,
+        "abilities": "burn",
+        "card_template_id": 17
+    },
+    {
+        "name": "Eternal Watcher",
+        "cost": 7,
+        "health": 5,
+        "attack": 6,
+        "move": 1,
+        "abilities": "aegis",
+        "card_template_id": 18
+    }
+]
