@@ -15,7 +15,6 @@ def load_card_templates(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
-# Load the card templates from 'card_templates.json'
 card_templates = load_card_templates('card_templates.json')
 
 #################################################################################################################################################################################################################
@@ -30,12 +29,13 @@ class Card:
         self.cost = card_template["cost"]
         self.ability = card_template["abilities"]
         self.move = card_template["move"]
+        self.type = card_template["type"]
 
     def print(self):
         name_line_1 = self.name[:9]
         name_line_2 = self.name[9:18] 
         # Card visual structure
-        print("+---------+")  
+        print(f"+-{self.type:<7}-+")  
         print(f"|{name_line_1:<9}|") 
         print(f"|{name_line_2:<9}|") 
         print(f"|H:{self.health:<2} A:{self.attack:<2}|") 
@@ -71,7 +71,7 @@ class Player:
 
     def show_hand(self):
         """Display the cards in the player's hand in an ASCII card format."""
-        print(f"----------------------------{self.name}----------------------------")
+        print(f"----------------------------{self.name}--{self.health}------------------------")
         card_lines = [[] for _ in range(7)]  # Create a list to store each line of the card representation
 
         for card in self.hand:
@@ -79,7 +79,7 @@ class Player:
             name_line_2 = card.name[9:18]  # Next 9 characters of the name (if available)
 
             # Card visual structure
-            card_lines[0].append("+---------+")  # Top border of card
+            card_lines[0].append(f"+-{card.type:<7}-+")  # Top border of card
             card_lines[1].append(f"|{name_line_1:<9}|")  # First line of the name (up to 9 characters)
             card_lines[2].append(f"|{name_line_2:<9}|") 
             card_lines[3].append(f"|H:{card.health:<2} A:{card.attack:<2}|")  # Health and Attack
@@ -115,21 +115,18 @@ class Field:
 
             for card in row:
                 if card:
-                    # Create card representation for the current card
-                    name_line_1 = card.name[:9]  # First 9 characters of the name
-                    name_line_2 = card.name[9:18]  # Next 9 characters of the name (if available)
-
+                    name_line_1 = card.name[:9]  
+                    name_line_2 = card.name[9:18]  
                     card_lines = [
-                        "+---------+",  # Top border of the card
-                        f"|{name_line_1:<9}|",  # First line of the name
-                        f"|{name_line_2:<9}|",  # Second line of the name
-                        f"|H:{card.health:<2} A:{card.attack:<2}|",  # Health and Attack
-                        f"|M:{card.move:<2} C:{card.cost:<2}|",  # Move and Cost
-                        f"|{card.ability[:9]:<9}|",  # Ability (limited to 9 characters)
-                        "+---------+"  # Bottom border of the card
+                        f"+-{card.type:<7}-+", 
+                        f"|{name_line_1:<9}|", 
+                        f"|{name_line_2:<9}|", 
+                        f"|H:{card.health:<2} A:{card.attack:<2}|", 
+                        f"|M:{card.move:<2} C:{card.cost:<2}|", 
+                        f"|{card.ability[:9]:<9}|",  
+                        "+---------+"  
                     ]
                 else:
-                    # Empty slot representation
                     card_lines = [
                         "+---------+",
                         "|         |",
@@ -139,35 +136,26 @@ class Field:
                         "|         |",
                         "+---------+"
                     ]
-
-                # Append each line of the card (or empty slot) to the row's line representation
                 for i in range(7):
                     row_card_lines[i].append(card_lines[i])
-
-            # After processing each card in the row, print the row
             for i in range(7):
-                print("  ".join(row_card_lines[i]))  # Print each row of the field
-
+                print("  ".join(row_card_lines[i]))  
 #################################################################################################################################################################################################################
 # Base Functions
-
 def start_duel():
     """Initiates a duel by setting up decks, shuffling, and drawing hands."""
     print("Starting the duel...")
 
     # Create players
-    player1 = Player("Player", card_templates)
-    com = Com(card_templates)
+    player1 = Player("Player", card_templates)  #later player_deck
+    com = Com(card_templates)                   #later com_deck(level)
 
-    # Both players draw 4 cards from their shuffled deck
     player1.draw_cards(4)
     com.draw_cards(4)
 
-    # Show each player's hand
     player1.show_hand()
     com.show_hand()
 
-    # Initialize the game field
     field = Field()
 
     # Place two cards on the field for demons
@@ -175,10 +163,40 @@ def start_duel():
     # field.place_card(player1.hand[0], 0, 0)
     # field.place_card(com.hand[0], 1, 1)
 
-    # Display the game field
     field.display_field()
 
+# TYPES PROTOYPE
+#  PSI:
+
+#     Beats: Shadow, Stone
+#     Weak against: Wind, Fire
+
+# Shadow:
+
+#     Beats: Stone, Water
+#     Weak against: PSI, Fire
+
+# Stone:
+
+#     Beats: Water, Wind
+#     Weak against: Shadow, PSI
+
+# Water:
+
+#     Beats: Wind, Fire
+#     Weak against: Stone, Shadow
+	
+# Wind:
+
+#     Beats: Fire, PSI
+#     Weak against: Water, Stone
+
+# Fire:
+
+#     Beats: PSI, Wind
+#     Weak against: PSI, Shadow
+	
+	
 #################################################################################################################################################################################################################
 # Base Script
-
 start_duel()

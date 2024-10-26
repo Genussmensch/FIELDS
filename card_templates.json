@@ -1,3 +1,4 @@
+
 [
     {
         "name": "Ashen Warrior",
@@ -6,7 +7,8 @@
         "attack": 1,
         "move": 1,
         "abilities": "none",
-        "card_template_id": 1
+        "card_template_id": 1,
+        "type": "Fire"
     },
     {
         "name": "Shadow Thief",
@@ -15,7 +17,8 @@
         "attack": 2,
         "move": 1,
         "abilities": "none",
-        "card_template_id": 2
+        "card_template_id": 2,
+        "type": "Shadow"
     },
     {
         "name": "Arcane Mage",
@@ -24,16 +27,18 @@
         "attack": 1,
         "move": 1,
         "abilities": "none",
-        "card_template_id": 3
+        "card_template_id": 3,
+        "type": "PSI"
     },
     {
-        "name": "Hollow Knight",
+        "name": "Haunted Knight",
         "cost": 2,
         "health": 1,
         "attack": 1,
         "move": 1,
         "abilities": "none",
-        "card_template_id": 4
+        "card_template_id": 4,
+        "type": "Shadow"
     },
     {
         "name": "Grave Warden",
@@ -42,7 +47,8 @@
         "attack": 1,
         "move": 2,
         "abilities": "none",
-        "card_template_id": 5
+        "card_template_id": 5,
+        "type": "Stone"
     },
     {
         "name": "Skeletal Vanguard",
@@ -51,7 +57,8 @@
         "attack": 1,
         "move": 2,
         "abilities": "none",
-        "card_template_id": 6
+        "card_template_id": 6,
+        "type": "Shadow"
     },
     {
         "name": "Corrupted Knight",
@@ -60,7 +67,8 @@
         "attack": 2,
         "move": 1,
         "abilities": "parry",
-        "card_template_id": 7
+        "card_template_id": 7,
+        "type": "Stone"
     },
     {
         "name": "Abyssal Wanderer",
@@ -69,7 +77,8 @@
         "attack": 3,
         "move": 2,
         "abilities": "stealth",
-        "card_template_id": 8
+        "card_template_id": 8,
+        "type": "Shadow"
     },
     {
         "name": "Blighted Sorcerer",
@@ -78,7 +87,8 @@
         "attack": 3,
         "move": 1,
         "abilities": "spellcast",
-        "card_template_id": 9
+        "card_template_id": 9,
+        "type": "PSI"
     },
     {
         "name": "Iron Sentinel",
@@ -87,7 +97,8 @@
         "attack": 1,
         "move": 1,
         "abilities": "block",
-        "card_template_id": 10
+        "card_template_id": 10,
+        "type": "Stone"
     },
     {
         "name": "Fallen Knight",
@@ -96,7 +107,8 @@
         "attack": 3,
         "move": 2,
         "abilities": "none",
-        "card_template_id": 11
+        "card_template_id": 11,
+        "type": "Shadow"
     },
     {
         "name": "Cursed Herald",
@@ -105,7 +117,8 @@
         "attack": 4,
         "move": 1,
         "abilities": "lifesteal",
-        "card_template_id": 12
+        "card_template_id": 12,
+        "type": "Shadow"
     },
     {
         "name": "Watcher of the Abyss",
@@ -114,7 +127,8 @@
         "attack": 3,
         "move": 1,
         "abilities": "counter",
-        "card_template_id": 13
+        "card_template_id": 13,
+        "type": "Shadow"
     },
     {
         "name": "Blackened Paladin",
@@ -123,7 +137,8 @@
         "attack": 3,
         "move": 1,
         "abilities": "none",
-        "card_template_id": 14
+        "card_template_id": 14,
+        "type": "Fire"
     },
     {
         "name": "Soul Reaper",
@@ -132,7 +147,8 @@
         "attack": 4,
         "move": 2,
         "abilities": "drain",
-        "card_template_id": 15
+        "card_template_id": 15,
+        "type": "Shadow"
     },
     {
         "name": "Crimson Executioner",
@@ -141,7 +157,8 @@
         "attack": 5,
         "move": 1,
         "abilities": "cleave",
-        "card_template_id": 16
+        "card_template_id": 16,
+        "type": "Fire"
     },
     {
         "name": "Lord of Cinders",
@@ -150,7 +167,8 @@
         "attack": 5,
         "move": 2,
         "abilities": "burn",
-        "card_template_id": 17
+        "card_template_id": 17,
+        "type": "Fire"
     },
     {
         "name": "Eternal Watcher",
@@ -159,6 +177,7 @@
         "attack": 6,
         "move": 1,
         "abilities": "aegis",
-        "card_template_id": 18
+        "card_template_id": 18,
+        "type": "PSI"
     }
 ]
